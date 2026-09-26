@@ -1,6 +1,6 @@
 # Annotation guideline — Vùng xe chạy được (Drivable Area) trên ảnh BDD100K
 
-**Version:** v1
+**Version:** v2
 
 <!--
 File này là thứ nhóm peer nhận nguyên văn trong blind pack và là Guide dán vào CVAT. Peer KHÔNG nhận

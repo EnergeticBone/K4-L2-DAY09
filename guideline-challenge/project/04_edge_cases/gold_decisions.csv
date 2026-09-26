@@ -1,1 +1,15 @@
 sample_id,decision_id,expected,severity,rationale
+BDD08,d1,label=drivable_area x2,major,Hai làn đường hợp lệ cùng chiều gồm làn ego đang chạy (direct) và làn bên cạnh phân tách bởi vạch đứt trắng (alternative).
+BDD08,d2,areaType=direct (làn ego đang chạy),major,Làn xe ego đang chạy thẳng không cần chuyển làn phải gán direct theo downstream contract.
+BDD08,d3,geometry: mép trái polygon direct bám sát vạch vàng liền nét không vẽ lấn qua con lươn bê tông,critical,Dải phân cách con lươn bê tông bên trái là vật cản cứng cố định vẽ lấn sang là False Positive nguy hiểm va chạm trực tiếp.
+BDD14,d1,label=drivable_area x2,major,Làn ego đang chạy (direct) và làn bên trái phân tách bởi vạch đứt (alternative).
+BDD14,d2,geometry: dừng biên phải tại vạch sơn trắng liền nét không vẽ lấn sang lề cỏ dốc bên phải,critical,Lề cỏ dốc bên phải đường cao tốc là vùng cấm chạy ngoài scope gán drivable là False Positive nghiêm trọng gây lật xe.
+BDD17,d1,areaType=direct (làn trước xe taxi),major,Mặt đường trước mũi xe ego là luồng di chuyển chính direct.
+BDD17,d2,geometry: ranh giới mép phải polygon né hàng xe sedan đen đỗ sát vỉa hè không vẽ đè lên thân xe đỗ,major,Xe đỗ sát lề là chướng ngại vật cố định polygon drivable area chỉ bao phủ luồng đường lưu thông thông suốt.
+BDD17,d3,attr:weather=rainy (tag image_context),minor,Bắt buộc ghi nhận thời tiết mưa để phân tầng dữ liệu theo chuẩn ontology.
+BDD20,d1,areaType=direct (nửa đường bên phải giữa vạch vàng kép và vạch trắng mép đường),major,Làn di chuyển hợp pháp cùng chiều của xe ego trong khu dân cư.
+BDD20,d2,geometry: mép trái polygon direct bám sát vạch vàng kép tim đường tuyệt đối không vẽ lấn sang làn ngược chiều bên trái vạch vàng,critical,Làn bên trái vạch vàng kép là luồng xe chạy ngược chiều gán nhầm là False Positive tối kỵ gây va chạm đối đầu trực diện.
+BDD20,d3,geometry: mép phải polygon direct dừng tại vạch sơn trắng liền mép đường không vẽ trùm lên ô đỗ xe của chiếc SUV màu trắng,critical,Phần đường sau vạch trắng là khu vực đỗ xe sát vỉa hè có chiếc SUV trắng đang đỗ vẽ trùm lên là False Positive đâm vào xe đỗ.
+BDD26,d1,areaType=direct (làn trước đầu xe được đèn pha rọi sáng),major,Làn xe chạy chính của ego hướng về phía giao lộ có đèn tín hiệu xanh.
+BDD26,d2,geometry: dừng đỉnh xa của polygon direct tại quầng rọi sáng của đèn pha không vẽ suy đoán vào khoảng tối mù phía xa,minor,Tuân thủ nguyên tắc downstream chỉ vẽ phần mặt đường nhìn thấy rõ không ngoại suy vào bóng tối.
+BDD26,d3,geometry: mép trái polygon không vẽ trùm lên đảo giao thông và cột đèn tín hiệu bên trái,critical,Đảo giao thông và cột đèn tín hiệu là kết cấu hạ tầng cố định cấm chạy vẽ lấn sang là False Positive nghiêm trọng.

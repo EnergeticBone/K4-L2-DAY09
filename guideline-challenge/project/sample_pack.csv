@@ -1,1 +1,16 @@
 sample_id,split,tags,reason
+BDD11,example,normal,Dùng làm ví dụ cho trường hợp có vạch cấm lấn làn và vạch cho người đi bộ
+BDD02,example,normal,"Hình cơ bản, dùng để làm ví dụ minh hoạ với đa số trường hợp thông thường và trường hợp có vạch cho người đi bộ"
+BDD10,example,edge;occlusion,Phố thương mại ban ngày có hàng xe ô tô đỗ dọc sát mép lề đường bên phải
+BDD01,calibration,edge,Có vạch xương cá trên cao tốc
+BDD03,calibration,edge,Không rõ phải làn dừng khẩn cấp không
+BDD04,calibration,edge,Không rõ phần có thể đi được
+BDD05,calibration,edge,Có vạch xương cá
+BDD07,calibration,normal,Vạch tim đường cấm lấn làn
+BDD18,calibration,critical,Trời tối khiến làn đường không rõ ràng
+BDD24,calibration,edge,Đường có tuyết
+BDD08,blind,normal,Cao tốc ban ngày thời tiết quang đãng vạch kẻ phân làn rõ ràng
+BDD14,blind,edge;occlusion,Cao tốc mật độ xe đông có vạch liền mép đường và lề cỏ dốc bên phải
+BDD17,blind,edge;low_visibility,Phố mưa ướt mặt đường phản quang vũng nước và giác hút camera che góc kính
+BDD20,blind,critical;ambiguity,Phố dân cư hai chiều có vạch vàng kép tim đường phân cách luồng ngược chiều và xe SUV đỗ bên phải
+BDD26,blind,critical;edge;low_visibility,Phố ban đêm thiếu sáng có đèn tín hiệu giao thông xanh và xe tối màu bên phải

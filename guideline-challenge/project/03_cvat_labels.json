@@ -1,1 +1,78 @@
-[]
+[
+    {
+        "name": "drivable_area",
+        "id": 135,
+        "color": "#1f77b4",
+        "type": "polygon",
+        "attributes": [
+            {
+                "id": 28,
+                "name": "areaType",
+                "input_type": "select",
+                "mutable": false,
+                "values": [
+                    "__undefined__",
+                    "direct",
+                    "alternative"
+                ],
+                "default_value": "__undefined__"
+            },
+            {
+                "id": 29,
+                "name": "needs_review",
+                "input_type": "checkbox",
+                "mutable": false,
+                "values": [
+                    "false"
+                ],
+                "default_value": "false"
+            }
+        ]
+    },
+    {
+        "name": "image_context",
+        "id": 136,
+        "color": "#2ca02c",
+        "type": "tag",
+        "attributes": [
+            {
+                "id": 30,
+                "name": "weather",
+                "input_type": "select",
+                "mutable": false,
+                "values": [
+                    "__undefined__",
+                    "clear",
+                    "partly cloudy",
+                    "overcast",
+                    "rainy",
+                    "snowy",
+                    "foggy",
+                    "undefined"
+                ],
+                "default_value": "__undefined__"
+            },
+            {
+                "id": 31,
+                "name": "timeofday",
+                "input_type": "select",
+                "mutable": false,
+                "values": [
+                    "__undefined__",
+                    "daytime",
+                    "dawn/dusk",
+                    "night",
+                    "undefined"
+                ],
+                "default_value": "__undefined__"
+            }
+        ]
+    },
+    {
+        "name": "image_escalate",
+        "id": 137,
+        "color": "#d62728",
+        "type": "tag",
+        "attributes": []
+    }
+]
