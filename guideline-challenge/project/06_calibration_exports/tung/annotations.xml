@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>26</id>
+      <size>7</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2026-09-26 13:53:00.494366+00:00</created>
+      <updated>2026-09-26 14:31:41.073524+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>6</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>26</id>
+          <start>0</start>
+          <stop>6</stop>
+          <url>http://localhost:8080/api/jobs/26/dataset/export/api/jobs/26</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>TuanLinh</username>
+        <email>trumankhoc247@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>drivable_area</name>
+          <color>#1f77b4</color>
+          <type>polygon</type>
+          <attributes>
+            <attribute>
+              <name>areaType</name>
+              <mutable>False</mutable>
+              <input_type>select</input_type>
+              <default_value>__undefined__</default_value>
+              <values>__undefined__
+direct
+alternative</values>
+            </attribute>
+            <attribute>
+              <name>needs_review</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>image_context</name>
+          <color>#2ca02c</color>
+          <type>tag</type>
+          <attributes>
+            <attribute>
+              <name>weather</name>
+              <mutable>False</mutable>
+              <input_type>select</input_type>
+              <default_value>__undefined__</default_value>
+              <values>__undefined__
+clear
+partly cloudy
+overcast
+rainy
+snowy
+foggy
+undefined</values>
+            </attribute>
+            <attribute>
+              <name>timeofday</name>
+              <mutable>False</mutable>
+              <input_type>select</input_type>
+              <default_value>__undefined__</default_value>
+              <values>__undefined__
+daytime
+dawn/dusk
+night
+undefined</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>image_escalate</name>
+          <color>#d62728</color>
+          <type>tag</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2026-09-26 14:31:53.301631+00:00</dumped>
+  </meta>
+  <image id="0" name="BDD01.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="261.12,549.37;464.48,367.67;517.37,325.61;519.62,324.27;521.29,355.87;542.12,359.02;571.81,359.02;609.70,355.75;610.85,352.41;610.27,314.14;635.92,344.98;702.40,407.04;796.27,487.05;856.34,537.83;580.01,530.71;429.99,537.76" z_order="0">
+      <attribute name="areaType">direct</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="manual" occluded="0" points="238.30,551.10;477.13,351.07;518.63,320.42;521.68,306.07;522.57,301.92;505.06,301.03;502.29,309.79;496.74,311.89;458.84,312.11;455.63,310.73;455.85,298.04;445.21,299.15;443.83,305.63;434.35,309.34;399.94,309.34;399.72,306.57;391.85,307.96;390.46,319.26;368.52,325.25;318.43,325.74;316.32,322.03;201.35,341.43;127.43,352.73;125.82,371.02;119.34,383.93;0.00,412.94;0.00,585.86;74.90,571.27;165.22,559.64" z_order="0">
+      <attribute name="areaType">alternative</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="manual" occluded="0" points="867.02,536.05;707.25,401.53;629.43,333.23;610.80,310.88;608.28,306.82;607.53,300.78;615.23,298.71;638.20,298.84;639.86,298.17;639.36,293.66;647.35,293.66;651.86,297.68;660.47,303.10;672.48,307.74;695.03,315.97;718.21,323.05;735.10,325.74;852.86,358.98;1007.17,400.78;1280.00,474.40;1280.00,582.01;1122.77,558.24;965.98,541.60" z_order="0">
+      <attribute name="areaType">alternative</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">clear</attribute>
+      <attribute name="timeofday">daytime</attribute>
+    </tag>
+  </image>
+  <image id="1" name="BDD03.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="486.76,581.20;542.37,450.12;568.09,366.70;565.61,344.26;557.57,333.63;554.59,331.35;551.81,328.96;548.53,327.57;545.55,325.79;555.48,323.60;561.34,323.70;582.00,327.77;584.28,380.70;676.74,379.91;678.62,377.92;679.22,353.39;720.73,367.79;816.36,407.32;1020.93,499.18;1267.51,609.80;932.05,574.25;619.64,575.15" z_order="0">
+      <attribute name="areaType">direct</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="manual" occluded="0" points="1280.00,601.28;994.73,477.85;776.96,384.76;698.16,356.61;678.77,348.80;678.05,330.73;762.60,340.90;887.30,357.20;1059.50,379.20;1280.00,408.70" z_order="0">
+      <attribute name="areaType">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">clear</attribute>
+      <attribute name="timeofday">daytime</attribute>
+    </tag>
+  </image>
+  <image id="2" name="BDD04.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="369.47,562.32;577.83,411.65;697.08,406.52;918.27,513.59;628.48,534.11;464.35,551.42" z_order="0">
+      <attribute name="areaType">__undefined__</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">clear</attribute>
+      <attribute name="timeofday">daytime</attribute>
+    </tag>
+  </image>
+  <image id="3" name="BDD05.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="51.18,582.37;536.97,357.50;538.17,373.04;604.26,375.01;604.86,347.63;609.84,347.03;609.67,349.69;661.34,396.81;876.77,604.00;652.32,580.91;444.62,570.01;233.05,573.88" z_order="0">
+      <attribute name="areaType">direct</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">partly cloudy</attribute>
+      <attribute name="timeofday">daytime</attribute>
+    </tag>
+  </image>
+  <image id="4" name="BDD07.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="397.00,564.04;524.21,332.93;610.73,332.87;612.93,305.43;614.06,295.44;624.05,294.30;632.37,300.70;683.99,348.72;816.99,450.28;943.87,555.12;734.34,547.06;549.59,552.85" z_order="0">
+      <attribute name="areaType">direct</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="manual" occluded="0" points="961.99,557.65;793.48,421.78;684.26,336.13;722.22,338.86;760.85,338.39;764.24,332.87;765.44,311.75;816.99,313.88;861.15,316.28;871.74,316.55;870.47,320.15;869.28,323.74;868.81,327.34;868.61,330.93;868.34,334.53;868.08,338.13;868.08,341.99;868.34,345.59;868.81,349.18;870.74,353.71;935.08,372.16;947.33,374.63;1036.51,375.02;1280.00,444.28;1280.00,604.99;1248.37,595.41;1093.86,568.77" z_order="0">
+      <attribute name="areaType">alternative</attribute>
+      <attribute name="needs_review">true</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">clear</attribute>
+      <attribute name="timeofday">daytime</attribute>
+    </tag>
+  </image>
+  <image id="5" name="BDD18.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="538.46,515.35;625.90,357.40;654.70,359.90;986.18,518.45;1029.51,542.17;798.43,525.67" z_order="0">
+      <attribute name="areaType">direct</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="manual" occluded="0" points="506.30,516.60;574.69,423.03;614.76,365.24;592.18,365.01;581.62,362.46;559.51,363.93;557.66,393.52;555.81,409.32;411.55,407.31;383.73,403.69;231.00,435.98;82.73,444.15;0.00,448.33;0.00,543.30;261.51,526.83;419.80,519.36" z_order="0">
+      <attribute name="areaType">alternative</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">clear</attribute>
+      <attribute name="timeofday">night</attribute>
+    </tag>
+  </image>
+  <image id="6" name="BDD24.jpg" width="1280" height="720">
+    <polygon label="drivable_area" source="manual" occluded="0" points="477.39,577.43;503.40,456.70;518.50,373.40;518.90,347.30;510.10,345.20;500.20,359.10;479.40,360.00;465.40,414.25;334.20,406.26;334.86,377.62;116.41,456.21;0.00,513.62;0.00,559.87;172.56,563.51" z_order="0">
+      <attribute name="areaType">direct</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <polygon label="drivable_area" source="manual" occluded="0" points="494.28,579.04;533.00,400.80;632.90,403.00;638.70,373.20;840.60,528.80;846.55,561.24;919.14,575.48;1121.06,720.00;944.62,720.00;842.28,665.86;702.80,621.74;606.72,602.52" z_order="0">
+      <attribute name="areaType">alternative</attribute>
+      <attribute name="needs_review">false</attribute>
+    </polygon>
+    <tag label="image_context" source="manual">
+      <attribute name="weather">clear</attribute>
+      <attribute name="timeofday">dawn/dusk</attribute>
+    </tag>
+  </image>
+</annotations>

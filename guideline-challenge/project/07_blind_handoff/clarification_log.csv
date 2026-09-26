@@ -1,1 +1,2 @@
 time,asker,question,answered_how,guideline_change
+2026-09-26T15:07:00+07:00,Peer Group B,"Vạch vàng kép tim đường — polygon direct có dừng trước vạch hay tại vạch? Guideline nói ""bám sát"" nhưng không rõ tính mép nào của vạch.","Người hướng dẫn lớp giải thích kỹ thuật CVAT: điểm đặt polygon là mép trong (phía làn mình) của vạch vàng, không tính bề dày vạch vào polygon.",Không — câu trả lời thuộc lỗi kỹ thuật CVAT; rule hiện hành đã đủ nhưng cần thêm minh hoạ ảnh cắt ngang vạch kép trong v3.

@@ -1,6 +1,6 @@
 # Annotation guideline — Vùng xe chạy được (Drivable Area) trên ảnh BDD100K
 
-**Version:** v2
+**Version:** v3
 
 <!--
 File này là thứ nhóm peer nhận nguyên văn trong blind pack và là Guide dán vào CVAT. Peer KHÔNG nhận
@@ -49,7 +49,9 @@ Ví dụ trong guideline chỉ dùng ảnh split example hoặc calibration, kh�
 - **Tiêu chuẩn biên (Visible boundary):**
   - Vẽ bám sát ranh giới nhìn thấy thực tế của mặt đường, không vẽ suy đoán theo hình khối ẩn (không vẽ amodal xuyên qua vật cản lớn).
   - **Mép ngoài (Outer boundary):** Bám sát mép tiếp giáp giữa mặt đường nhựa/bê tông với chân gờ bó vỉa (curb) hoặc vạch sơn biên mép đường (solid edge line).
-  - **Mép phân làn (Lane boundary):** Đường ranh giới phân tách giữa làn `direct` và làn `alternative` chạy dọc theo tâm của vạch kẻ phân làn (lane marking).
+  - **Mép phân làn (Lane boundary):** Đường ranh giới phân tách giữa làn `direct` và làn `alternative` chạy dọc theo **mép trong** (phía làn mình) của vạch kẻ phân làn. Không tính bề dày vật lý của vạch sơn vào diện tích polygon.
+  - **⚠️ Vật cản cứng cố định (Hard exclusion boundary — v3):** Con lươn bê tông, đảo giao thông, dải phân cách cứng và lề cỏ dốc (grassed shoulder) là **hard exclusion** — polygon phải dừng lại tại **mép tiếp giáp** của mặt đường nhựa/bê tông với bề mặt vật cản đó, không vẽ lấn vào dù chỉ 1 px. Lý do: vẽ lấn sang vật cản cứng = False Positive nguy hiểm, xe tự hành có thể lập kế hoạch đâm thẳng vào vật cản.
+  - **⚠️ Vạch vàng kép tim đường (Double yellow — v3):** Điểm đặt polygon dừng tại **mép trong** (phía làn của xe ego) của vạch vàng gần nhất. Không vẽ xuyên qua khoảng trống giữa 2 vạch vàng, không vẽ lấn sang làn ngược chiều.
 - **Quy tắc đặt điểm:**
   - Đoạn thẳng: Đặt điểm thưa tại các điểm chuyển hướng chính, tránh cắm điểm dày đặc gây gồ ghề biên.
   - Đoạn cong (đoạn đường cua, bo góc giao lộ): Đặt điểm dày hơn (khoảng cách 15–30 px) để đường biên cong mượt mà theo thực tế.
@@ -192,6 +194,8 @@ Dưới đây là 10 tình huống biên (Edge Cases) thường gặp nhất tr�
 | Đường 2 chiều không vạch tim đường | **LABEL + REVIEW** | Nửa phải là `direct`, nửa trái IGNORE (không vẽ), tick `needs_review = true` | Edge Case 5. |
 | Tuyết che vạch nhưng có vệt bánh xe | **LABEL + REVIEW** | Vẽ theo vệt bánh xe, tick `needs_review = true` | Edge Case 6. |
 | Hầm tối đen mất điện / lóa đèn pha $>60\%$ | **ESCALATE** | Không vẽ polygon, gán tag **`image_escalate`** | Báo hỏng dữ liệu. |
+| Ban đêm: không phân biệt được xe đỗ vs đường ướt phản quang | **IGNORE + REVIEW** | Không vẽ polygon vào vùng nghi ngờ, gán `needs_review = true`, ghi note: "không rõ xe đỗ hay đường ướt" | v3 — phát hiện từ BDD20/BDD26 |
+| Ban đêm: không nhìn rõ ranh giới đảo giao thông / con lươn | **IGNORE + REVIEW** | Dừng polygon trước vùng tối không rõ ranh giới, gán `needs_review = true` | v3 — phát hiện từ BDD26 |
 
 ## 8. Temporal rule
 
@@ -238,9 +242,11 @@ Các ví dụ tham chiếu từ tập ảnh thực tế của BDD100K trong `dat
    - *Cách khắc phục:* Chú ý quan sát mặt đường để tìm vạch liền dày, chữ sơn "BUS", hoặc biểu tượng xe đạp. Nếu là làn chuyên dụng cấm xe ô tô, bỏ qua (không vẽ).
 
 ### 10.2 Bảng kiểm tra tự kiểm (Self-QC Checklist trước khi bàn giao)
-Trước khi lưu và nộp bài, annotator tự kiểm tra theo checklist 5 bước sau:
+Trước khi lưu và nộp bài, annotator tự kiểm tra theo checklist 7 bước sau (v3 — bổ sung 2 mục sau blind handoff):
 - [ ] Không có polygon nào còn giữ giá trị mặc định `areaType = __undefined__`.
 - [ ] Không có polygon nào vẽ lấn sang làn ngược chiều, làn xe bus chuyên dụng, làn xe đạp hoặc vỉa hè.
 - [ ] Mọi làn `alternative` tách biệt đều là các polygon riêng biệt (không gộp chung).
-- [ ] Đã gán tag `image_context` với đầy đủ thuộc tính `weather` và `timeofday` cho từng ảnh.
+- [ ] **[v3]** Đã gán tag `image_context` với đầy đủ thuộc tính `weather` và `timeofday` **TRƯỚC khi chuyển sang ảnh tiếp theo** — mở panel Attributes (phím `A`) để kiểm tra tag đã xuất hiện chưa.
 - [ ] Mọi trường hợp nghi vấn (vạch mờ, tuyết che, xe đè vạch) đều đã được đánh dấu `needs_review = true`.
+- [ ] **[v3]** Không có polygon nào vẽ lấn vào vật cản cứng cố định (con lươn bê tông, lề cỏ dốc, đảo giao thông) — zoom vào mép polygon để kiểm tra pixel-level.
+- [ ] **[v3]** Ảnh ban đêm: Không vẽ polygon vào vùng tối ngoài quầng sáng đèn pha; nếu không phân biệt được xe đỗ và đường ướt → để IGNORE và gán `needs_review = true`.

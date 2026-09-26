@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>42</id>
+      <name>K4-L2-DAY09 Blind Pack — Peer Group B</name>
+      <size>5</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2026-09-26 15:00:00+07:00</created>
+      <updated>2026-09-26 15:14:37+07:00</updated>
+    </task>
+  </meta>
+
+  <image id="0" name="BDD08.jpg" width="1280" height="720">
+    <polygon label="drivable_area" occluded="0"
+      points="640,700;900,700;920,580;800,530;640,540"
+      z_order="0">
+      <attribute name="areaType">direct</attribute>
+    </polygon>
+    <polygon label="drivable_area" occluded="0"
+      points="900,700;1100,700;1090,580;920,580"
+      z_order="0">
+      <attribute name="areaType">alternative</attribute>
+    </polygon>
+  </image>
+
+  <image id="1" name="BDD14.jpg" width="1280" height="720">
+    <polygon label="drivable_area" occluded="0"
+      points="420,700;850,700;870,560;640,520;380,550"
+      z_order="0">
+      <attribute name="areaType">direct</attribute>
+    </polygon>
+    <polygon label="drivable_area" occluded="0"
+      points="160,700;420,700;380,550;200,560"
+      z_order="0">
+      <attribute name="areaType">alternative</attribute>
+    </polygon>
+  </image>
+
+  <image id="2" name="BDD17.jpg" width="1280" height="720">
+    <polygon label="drivable_area" occluded="0"
+      points="320,700;900,700;880,560;640,520;300,555"
+      z_order="0">
+      <attribute name="areaType">direct</attribute>
+    </polygon>
+  </image>
+
+  <image id="3" name="BDD20.jpg" width="1280" height="720">
+    <polygon label="drivable_area" occluded="0"
+      points="200,700;1000,700;980,560;200,560"
+      z_order="0">
+      <attribute name="areaType">direct</attribute>
+    </polygon>
+  </image>
+
+  <image id="4" name="BDD26.jpg" width="1280" height="720">
+    <polygon label="drivable_area" occluded="0"
+      points="440,700;820,700;810,460;640,400;430,470"
+      z_order="0">
+      <attribute name="areaType">direct</attribute>
+    </polygon>
+  </image>
+
+</annotations>
